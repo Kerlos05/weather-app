@@ -1,0 +1,218 @@
+*{
+    margin: 0; 
+    padding:0; 
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(26, 26, 28);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+  
+::-webkit-scrollbar-thumb {
+background-color: black;
+border-radius: 30px;
+}
+  
+
+.container-style{
+    background: url(./weather-condition-images/welcome.jpg) no-repeat;
+    background-size: cover ;
+    padding: 10px; 
+    height: 340px;
+    width: 60%;
+    position: relative;
+
+}
+
+
+.search-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 5px; 
+    left: 50px;  
+    background-color: rgb(26, 26, 28, .72);
+}
+
+.fa-search{
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    cursor: pointer;    
+    z-index: 10000;
+
+}
+
+
+body.open .search-section input{
+    display: inline;
+    margin-left: 10px;
+}
+
+input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    display: none;
+    padding: 10px;
+    color: aliceblue;
+
+}
+
+.dis{
+    position: absolute;
+    bottom: 0px; 
+    left: 20px; 
+}
+
+.dis p:first-child{
+    font-size: 28px;
+    transform: translateY(20px);
+}
+
+p{
+    user-select: none
+}
+
+
+/* Tablets */
+@media screen and (min-width: 767px) and (max-width: 991px) {
+    body .forecast{
+        bottom: auto; 
+    }
+   body #forcastDisplayer{
+        justify-content: unset;
+        margin-left: 20px;
+        padding: 10px; 
+        width: 100%; 
+    }
+    .fa-search{
+        left: 20px; 
+    }
+
+    .dis{
+        bottom: 15px; 
+        left: 20px; 
+    }
+
+    .dis p:first-child{
+        font-size: 21px;
+    }
+
+    .dis p:last-child{
+        font-size: 16px;
+    }
+
+
+    .container-style{
+        bottom: 300px; 
+    }
+    .search-section{
+        left: 50px; 
+    }
+}
+
+
+/* Desktop */
+@media screen and (min-width:1280px) and (max-width: 1290px) {
+    .fa-search{
+        left: 20px; 
+    }
+    .search-section{
+        left: 50px; 
+    }
+    .dis{
+        left: 20px; 
+    }
+}
+
+
+@media screen and (min-width:992px) and (max-width: 1024px) {
+    .fa-search{
+        left: 20px; 
+    }
+    .dis{
+        bottom: 10px; 
+        left: 10px; 
+    }
+    .search-section{
+        left: 50px; 
+    }
+}
+
+
+.forecast{
+    position: absolute;
+    bottom: -200px; 
+    color: aliceblue;
+}
+
+#forcastDisplayer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; 
+    overflow-x: auto;
+
+}
+
+.forecast-item{
+    display: grid;
+    place-items: center center;
+}
+
+
+/* Phones */
+@media screen and (max-width: 767px){
+    #forcastDisplayer{
+        align-items: unset;
+        justify-content: unset;
+    }
+
+    .forecast{
+        bottom: 0px; 
+    }
+
+    .fa-search{
+        left: 20px; 
+    }
+    .search-section{
+        left: 50px; 
+    }
+
+    .dis p:first-child{
+        font-size: 21px;
+    }
+
+    .dis p:last-child{
+        font-size: 16px;
+    }
+
+  
+    .container-style{
+        width: 100%;
+        position: absolute;
+        top: 0; 
+        left: 0; 
+        right: 0; 
+        background-position: unset;
+    }
+    .dis{
+        left: 10px; 
+        bottom: 15px;  
+    } 
+
+}
+
+
